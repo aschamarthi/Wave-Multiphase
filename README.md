@@ -3,8 +3,7 @@
 Multiphase solver implemented using [NVIDIA Warp](https://github.com/NVIDIA/warp) is based on the wave-appropriate reconstruction framework developed by Chamarthi et al. (2023–2026).
 
 ![TShock water droplet interaction](mp5_020448.png)
-![Triple point](sch.png)
-![Triple point](vort.png)
+![Triple point](side_by_side2.png)
 
 ---
 
