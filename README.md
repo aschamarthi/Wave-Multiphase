@@ -1,2 +1,24 @@
-# Wave-Multiphase
-Multiphase flows and GPU. 
+# WA-Warp: Wave-Appropriate reconstruction for multicomponent and multiphase flows
+
+A high-performance 3D compressible Euler solver implemented in [NVIDIA Warp](https://github.com/NVIDIA/warp), based on the wave-appropriate reconstruction framework of Chamarthi et al. (2023–2026).
+
+![TShock water droplet interaction](mp5_020448.png)
+*Density.*
+
+---
+
+## Details
+
+I will add more deatils and the code soon.
+
+## References
+
+1. Chamarthi, Hoffmann, Frankel — *A wave appropriate discontinuity sensor approach for compressible flows*, **Phys. Fluids** 35, 066107 (2023)
+2. Hoffmann, Chamarthi, Frankel — *Centralized gradient-based reconstruction for wall modeled large eddy simulations of hypersonic boundary layer transition*, **J. Comput. Phys.** (2024)
+3. Chamarthi — *Wave-appropriate multidimensional upwinding approach for compressible multiphase flows*, **J. Comput. Phys.** 538, 114157 (2025)
+4. Chamarthi — *Physics appropriate interface capturing reconstruction approach for viscous compressible multicomponent flows*, **Comput. Fluids** 303, 106858 (2025)
+5. Chamarthi — *Wave-appropriate reconstruction of compressible flows: physics-constrained acoustic dissipation and rank-1 entropy wave correction*, preprint (2026)
+
+## Author
+
+**Amareshwara Sainadh Chamarthi** sainath@caltech.edu
