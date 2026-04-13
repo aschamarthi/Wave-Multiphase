@@ -1,6 +1,6 @@
 # WA-Warp: Wave-Appropriate reconstruction for multicomponent and multiphase flows
 
-Multiphase solver implemented using [NVIDIA Warp](https://github.com/NVIDIA/warp), based on the wave-appropriate reconstruction framework of Chamarthi et al. (2023–2026).
+Multiphase solver implemented using [NVIDIA Warp](https://github.com/NVIDIA/warp) is based on the wave-appropriate reconstruction framework developed by Chamarthi et al. (2023–2026).
 
 ![TShock water droplet interaction](mp5_020448.png)
 
@@ -9,7 +9,7 @@ Multiphase solver implemented using [NVIDIA Warp](https://github.com/NVIDIA/warp
 
 ## Details
 
-I will add more deatils and the code soon.
+I’ll add more details and the code soon.
 
 ## References
 
