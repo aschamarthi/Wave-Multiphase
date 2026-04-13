@@ -1,9 +1,9 @@
 # WA-Warp: Wave-Appropriate reconstruction for multicomponent and multiphase flows
 
-A high-performance 3D compressible Euler solver implemented in [NVIDIA Warp](https://github.com/NVIDIA/warp), based on the wave-appropriate reconstruction framework of Chamarthi et al. (2023–2026).
+Multiphase solver implemented using [NVIDIA Warp](https://github.com/NVIDIA/warp), based on the wave-appropriate reconstruction framework of Chamarthi et al. (2023–2026).
 
 ![TShock water droplet interaction](mp5_020448.png)
-*Density.*
+
 
 ---
 
