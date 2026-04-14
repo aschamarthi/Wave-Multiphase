@@ -9,7 +9,7 @@ Multiphase solver implemented using [NVIDIA Warp](https://github.com/NVIDIA/warp
 
 ## Details
 
-I’ll add more details and the code soon.
+I’ll add more details and the code soon. Meanwhile check this, https://github.com/aschamarthi/WA-CR-Warp
 
 ## References
 
