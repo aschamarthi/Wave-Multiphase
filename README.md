@@ -28,9 +28,7 @@ If you have reached this point, I recommend reading the following papers publish
 
 ## Code
 
-There are two codes: sainath_SC_it_works.py and Sainath_M10.py. The first one goes beyond what I even considered in the arXiv:2604.20036 paper. It applies THINC for entropy waves and the central scheme for shear waves, and it works!!! I’ve added the positivity-preserving approach of Wong et al. (2021 JCP), which probably makes it work. Again, I didn’t consider it for the results in the main paper.
-
-Essentially, a better code and it gives you the following result.
+There are two codes: sainath_SC_it_works.py and Sainath_M10.py. The first one goes beyond what I even considered in the arXiv:2604.20036 paper. It applies THINC for entropy waves and the central scheme for shear waves, and it works!!! I’ve added the positivity-preserving approach of Wong et al. (2021 JCP), which probably makes it work. Again, I didn’t consider it for the results in the main paper. Essentially, a better code and it gives you the following result.
 
 ![TShock water droplet/cavity interaction](sainath_SC_cavity.png)
 *Shock–water cylinder interaction with a air cavity, M 2.4.*
