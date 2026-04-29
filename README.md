@@ -54,7 +54,7 @@ python Sainath_M10.py
 
 ```
 
-You can plot the npz file. Also check this, https://github.com/aschamarthi/WA-CR-Warp, in case you are interested. If you think you want a better scheme for liquids and gases separately, try this *Wave-appropriate multidimensional upwinding approach for compressible multiphase flows*, **J. Comput. Phys.** 538, 114157 (2025).... You can use characteristic variables all throughout and get even better results, like the first figure in this page. 
+You can plot the npz file. Also check this, https://github.com/aschamarthi/WA-CR-Warp, in case you are interested. If you think you want a better scheme for liquids and gases separately, try this *Wave-appropriate multidimensional upwinding approach for compressible multiphase flows*, **J. Comput. Phys.** 538, 114157 (2025).... You can use characteristic variables all throughout and get even better results, like the first figure in this page.
 
 ## Lastly
 
