@@ -13,7 +13,56 @@ Multiphase solver implemented using [NVIDIA Warp](https://github.com/NVIDIA/warp
 
 ## Details
 
-I’ll add more details and the code soon. Meanwhile check this, https://github.com/aschamarthi/WA-CR-Warp
+Before you begin using the code, please read the preprint titled “Wave-Appropriate Reconstruction of Compressible Multiphase and Multicomponent Flows: Fully Conservative and Semi-Conservative Eigenstructures” (2026), available on arXiv:2604.20036.
+
+If you have reached this point, I recommend reading the following papers published in the Journal of Computational Physics:
+
+- Karni (1994)
+- Abgrall (1996)
+- Abgrall and Karni (2001)
+- Johnsen and Colonius (2003)
+- Johnsen (2011)
+- Hoffmann, Chamarthi and Frankel (2024)
+- Chamarthi (2025)
+
+
+## Code
+
+There are two codes: sainath_SC_it_works.py and Sainath_M10.py. The first one goes beyond what I even considered in the arXiv:2604.20036 paper. It applies THINC for entropy waves and the central scheme for shear waves, and it works!!! I’ve added the positivity-preserving approach of Wong et al. (2021 JCP), which probably makes it work. Again, I didn’t consider it for the results in the main paper.
+
+Essentially, a better code and it gives you the following result.
+
+![TShock water droplet/cavity interaction](sainath_SC_cavity.png)
+*Shock–water cylinder interaction with a air cavity, M 2.4.*
+
+I wanted to make sure that the idea of using a central scheme works for the shear wave even for gas-liquid cases. In Hoffmann et al. (JCP 2024), we have used a central scheme for the shear wave, and it led to the transition in hypersonic flow over a ramp and other cases. I asked the simple question, "Why wouldn't it work for gas-gas and gas-liquid cases? There are researchers who are using fully central schemes, like KEEP, for gas-liquid flows (without shocks)" It took me two years, working on it occasionally. This code and the paper arXiv:2604.20036 are the outcome of it.
+
+
+Note: It worked for gas-liquid test cases, specifically the combination of THINC and central schemes. However, in reality, it’s challenging to maintain stability. I prefer using only THINC or only the central scheme for shear waves. The primary issue is the wake behind the droplets, where low-pressure and low-density regions develop. It’s not an easy task, and if it were, many others would have accomplished it. Nevertheless, if you’re only interested in gas-gas cases, you’re in luck. You can use the full algorithm, including THINC and the central scheme. You can even use the sixth-order scheme, as demonstrated in the result shown above for the compressible triple point case. This result was computed on a grid size of approximately 23 million using the MP5 scheme, THINC, and the sixth-order central scheme. The code can run up to 200 million grid points on a single GPU. Three-dimensional simulations are straightforward, and there’s no point in sharing the code.
+
+Second code: Sainath_M10.py is a shock interaction with a droplet at Mach 10. It works again. However, it only uses THINC and lacks a central scheme for shear. The problem lies in the wake. There are other code snippets in the first code. If you’ve come this far, I assume you’re clever enough to figure out how to incorporate  other version of THINC (commented out). The MP5 scheme is also included and can add WENO. There are plenty of choices available.
+
+
+![TShock water droplet M10 interaction](M10.png)
+*Shock–water cylinder interaction, Mach 10.*
+
+## Usage
+
+```bash
+# M10 case
+python Sainath_M10.py
+
+```
+
+You can plot the npz file. Also check this, https://github.com/aschamarthi/WA-CR-Warp, in case you are interested.
+
+## Lastly
+
+Thanks to Prof. Steven H. Frankel, Natan Hoffmann, and Sean Bokor with whom I have worked over the years. I am grateful to Natan Hoffmann and Sean Bokor for their patience and substantial implementation efforts during the development and testing of all the reconstruction algorithms presented and published over the years. I understand that his process may, at times, have been frustrating (to put it bluntly, a pain in the neck. It doesn't make sense to rewrite the code months before graduation). Sure did predict transition to turbulence and worked for reacting flows, but it’s been an arduous process. 
+
+
+Science, bloo*y h*ll. Just like football. Sometimes, that’s the way cookies crumble. That's about it.
+
 
 ## References
 
