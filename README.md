@@ -71,7 +71,7 @@ You can plot the npz file. Also check this, https://github.com/aschamarthi/WA-CR
 
 Thanks to Prof. Steven H. Frankel, Natan Hoffmann, and Sean Bokor with whom I have worked over the years. I am grateful to Natan Hoffmann and Sean Bokor for their patience and substantial implementation efforts during the development and testing of all the reconstruction algorithms presented and published over the years. I understand that this process may, at times, have been frustrating (It doesn't make sense to rewrite the code a million times; changing from primitive to conservative, so many algorithms, etc). Sure did predict transition to turbulence and worked for reacting flows, but it’s been arduous for everyone involved. 
 
-Science, bloo-y h-ll. Just like football. In the end, it took only a week to derive and implement the whole idea. Sometimes, that’s the way cookies crumble. That's about it.
+I wish I understood why there was a difference between primitive and conservative variable results in 2018 itself. Sometimes, that’s the way cookies crumble. That’s all there is to it. On to the next one.
 
 
 
