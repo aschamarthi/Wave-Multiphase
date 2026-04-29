@@ -56,11 +56,11 @@ python Sainath_M10.py
 
 ```
 
-You can plot the npz file. Also check this, https://github.com/aschamarthi/WA-CR-Warp, in case you are interested.
+You can plot the npz file. Also check this, https://github.com/aschamarthi/WA-CR-Warp, in case you are interested. If you think you want a better scheme for liquids and gases separately, try this *Wave-appropriate multidimensional upwinding approach for compressible multiphase flows*, **J. Comput. Phys.** 538, 114157 (2025).... You can use characteristic variables all throughout and get even better results, like the first figure in this page. 
 
 ## Lastly
 
-Thanks to Prof. Steven H. Frankel, Natan Hoffmann, and Sean Bokor with whom I have worked over the years. I am grateful to Natan Hoffmann and Sean Bokor for their patience and substantial implementation efforts during the development and testing of all the reconstruction algorithms presented and published over the years. I understand that his process may, at times, have been frustrating (to put it bluntly, a pain in the neck. It doesn't make sense to rewrite the code months before graduation). Sure did predict transition to turbulence and worked for reacting flows, but it’s been an arduous process. 
+Thanks to Prof. Steven H. Frankel, Natan Hoffmann, and Sean Bokor with whom I have worked over the years. I am grateful to Natan Hoffmann and Sean Bokor for their patience and substantial implementation efforts during the development and testing of all the reconstruction algorithms presented and published over the years. I understand that his process may, at times, have been frustrating (to put it bluntly, a pain in the neck. It doesn't make sense to rewrite the code months before graduation). Sure did predict transition to turbulence and worked for reacting flows, but it’s been an tortorous for everyone involved. 
 
 
 Science, bloo-y h-ll. Just like football. Sometimes, that’s the way cookies crumble. That's about it.
