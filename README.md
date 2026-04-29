@@ -15,15 +15,14 @@ Multiphase solver implemented using [NVIDIA Warp](https://github.com/NVIDIA/warp
 
 Before you begin using the code, please read the preprint titled “Wave-Appropriate Reconstruction of Compressible Multiphase and Multicomponent Flows: Fully Conservative and Semi-Conservative Eigenstructures” (2026), available on arXiv:2604.20036.
 
-If you have reached this point, I recommend reading the following papers published in the Journal of Computational Physics:
+If you have reached this point, please read the following papers published in the Journal of Computational Physics:
 
-- Karni (1994)
-- Abgrall (1996)
-- Abgrall and Karni (2001)
-- Johnsen and Colonius (2003)
-- Johnsen (2011)
-- Hoffmann, Chamarthi and Frankel (2024)
-- Chamarthi (2025)
+- Karni (1994), Abgrall (1996)
+- Abgrall and Karni (2001) ----> Double flux paper
+- Johnsen and Colonius (2003), Johnsen (2011) ---> Explains even single species requires characteristic variables if conservative variables are reconstructed.
+- Hoffmann, Chamarthi and Frankel (2024), Chamarthi (2025)
+
+If you intend to use primitive variables, you cannot employ the central scheme for shear waves. If it had been compatible with primitive variables, I wouldn’t have invested time, written these codes, and wrote these papers.
 
 
 ## Code
@@ -71,7 +70,7 @@ You can plot the npz file. Also check this, https://github.com/aschamarthi/WA-CR
 
 Thanks to Prof. Steven H. Frankel, Natan Hoffmann, and Sean Bokor with whom I have worked over the years. I am grateful to Natan Hoffmann and Sean Bokor for their patience and substantial implementation efforts during the development and testing of all the reconstruction algorithms presented and published over the years. I understand that this process may, at times, have been frustrating (It doesn't make sense to rewrite the code a million times; changing from primitive to conservative, so many algorithms, etc). Sure did predict transition to turbulence and worked for reacting flows, but it’s been arduous for everyone involved. 
 
-I wish I understood why there was a difference between primitive and conservative variable results in 2018 itself. Sometimes, that’s the way cookies crumble. That’s all there is to it.
+I wish I understood why there was a difference between primitive and conservative variable results in 2018 itself. Everyone is doing it can be an excuse. Sometimes, that’s the way cookies crumble. That’s all there is to it.
 
 
 ## References
