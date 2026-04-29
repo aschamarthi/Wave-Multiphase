@@ -60,7 +60,7 @@ You can plot the npz file. Also check this, https://github.com/aschamarthi/WA-CR
 
 ## Lastly
 
-Thanks to Prof. Steven H. Frankel, Natan Hoffmann, and Sean Bokor with whom I have worked over the years. I am grateful to Natan Hoffmann and Sean Bokor for their patience and substantial implementation efforts during the development and testing of all the reconstruction algorithms presented and published over the years. I understand that his process may, at times, have been frustrating (to put it bluntly, a pain in the neck. It doesn't make sense to rewrite the code months before graduation). Sure did predict transition to turbulence and worked for reacting flows, but it’s been an tortorous for everyone involved. 
+Thanks to Prof. Steven H. Frankel, Natan Hoffmann, and Sean Bokor with whom I have worked over the years. I am grateful to Natan Hoffmann and Sean Bokor for their patience and substantial implementation efforts during the development and testing of all the reconstruction algorithms presented and published over the years. I understand that his process may, at times, have been frustrating (to put it bluntly, a pain in the neck. It doesn't make sense to rewrite the code few months before graduation). Sure did predict transition to turbulence and worked for reacting flows, but it’s been tortorous for everyone involved. 
 
 
 Science, bloo-y h-ll. Just like football. Sometimes, that’s the way cookies crumble. That's about it.
