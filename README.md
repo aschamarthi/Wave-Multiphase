@@ -73,8 +73,17 @@ You can plot the npz file. Also check this, https://github.com/aschamarthi/WA-CR
 
 Thanks to Prof. Steven H. Frankel, Natan Hoffmann, and Sean Bokor with whom I have worked over the years. I am grateful to Natan Hoffmann and Sean Bokor for their patience and substantial implementation efforts during the development and testing of all the reconstruction algorithms presented and published over the years. I understand that this process may, at times, have been frustrating (It doesn't make sense to rewrite the code a million times; changing from primitive to conservative, so many algorithms, etc). Sure did predict transition to turbulence and worked for reacting flows, but it’s been arduous for everyone involved. 
 
-I wish I understood why there was a difference between primitive and conservative variable results in 2018 itself. Everyone is doing it can be an excuse. Sometimes, that’s the way cookie crumble. That’s all there is to it.
+I wish I understood why there was a difference between primitive and conservative variable results in 2018 itself. Everyone is doing it can be an excuse. Sometimes, that’s the way cookie crumble. That’s all there is to it. https://arxiv.org/pdf/2106.01738 --- is the work that started it all.
 
+I developed, debugged, and ran all the simulations on a rented GPU. This work is not funded; I did it purely out of curiosity and wanted to see how far it can go. My objective was to determine if the concept could be applied to a wide variety of problems, and fortunately, it worked. :)
+
+If there’s a will, there’s a way. Peace. 
+
+Few more figures......
+
+[](three_9.png)
+[](cuve_m6.png)
+[](curved_9.png)
 
 ## References
 
