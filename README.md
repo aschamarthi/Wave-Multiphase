@@ -81,9 +81,9 @@ If there’s a will, there’s a way. Peace.
 
 Few more figures......
 
-[](three_9.png)
-[](cuve_m6.png)
-[](curved_9.png)
+![Three gases](three_9.png)
+![Multiple bow shock](cuve_m6.png)
+![Bow shock single](curved_9.png)
 
 ## References
 
