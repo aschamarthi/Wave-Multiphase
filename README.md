@@ -2,6 +2,8 @@
 
 Multiphase solver implemented using [NVIDIA Warp](https://github.com/NVIDIA/warp) is based on the wave-appropriate reconstruction framework developed by Chamarthi et al. (2023–2026).
 
+Wave-Appropriate Reconstruction of Compressible Multiphase and Multicomponent Flows: Fully Conservative and Semi-Conservative Eigenstructures, Journal of Computational Physics. https://doi.org/10.1016/j.jcp.2026.115314
+
 ![TShock water droplet interaction](mp5_020448.png)
 *Shock–water cylinder interaction.*
 ![USS Enterprise](complex_droplet.png)
@@ -13,28 +15,28 @@ Multiphase solver implemented using [NVIDIA Warp](https://github.com/NVIDIA/warp
 
 ## Details
 
-Before you begin using the code, please read the preprint titled “Wave-Appropriate Reconstruction of Compressible Multiphase and Multicomponent Flows: Fully Conservative and Semi-Conservative Eigenstructures” (2026), available on arXiv:2604.20036.
+Before you begin using the code, please read the preprint titled “Wave-Appropriate Reconstruction of Compressible Multiphase and Multicomponent Flows: Fully Conservative and Semi-Conservative Eigenstructures” (2026), available on arXiv:2604.20036. or **J. Comput. Phys.** https://doi.org/10.1016/j.jcp.2026.115314
 
 If you have reached this point, please read the following papers published in the Journal of Computational Physics:
 
 - Karni (1994), Abgrall (1996)
 - Abgrall and Karni (2001) ----> Double flux paper
-- Johnsen and Colonius (2003), Johnsen (2011) ---> Explains even single species requires characteristic variables if conservative variables are reconstructed.
-- Hoffmann, Chamarthi and Frankel (2024), Chamarthi (2025)
+- Johnsen and Colonius (2006), Johnsen (2011) ---> Explains even single species requires characteristic variables if conservative variables are reconstructed.
+- Hoffmann, Chamarthi and Frankel (2024), Chamarthi (2025, 2026)
 
-If you intend to use primitive variables, you cannot employ the central scheme for shear waves. If it had been compatible with primitive variables, I wouldn’t have invested time, written these codes, and wrote these papers.
+If you intend to use primitive variables, you cannot employ the central scheme for shear waves. If it had been compatible with primitive variables, I wouldn’t have invested time, money, written these codes, and wrote these papers.
 
 
 ## Code
 
 There are two codes: sainath_SC_it_works.py and Sainath_M10.py. 
 
-The first one goes beyond what I even considered in the arXiv:2604.20036 paper. It applies THINC for entropy waves and the central scheme for shear waves, and it works!!! I’ve added the positivity-preserving approach of Wong et al. (2021 JCP), which probably makes it work. Again, I didn’t consider it for the results in the main paper. Essentially, a better code and it gives you the following result.
+The first one goes beyond what I even considered in the arXiv:2604.20036 paper (https://doi.org/10.1016/j.jcp.2026.115314). It applies THINC for entropy waves and the central scheme for shear waves, and it works!!! I’ve added the positivity-preserving approach of Wong et al. (2021 JCP), which probably makes it work. Again, I didn’t consider it for the results in the main paper. Essentially, a better code and it gives you the following result.
 
 ![TShock water droplet/cavity interaction](sainath_SC_cavity.png)
 *Shock–water cylinder interaction with a air cavity, M 2.4.*
 
-I wanted to make sure that the idea of using a central scheme works for the shear wave even for gas-liquid cases. In Hoffmann et al. (JCP 2024), we have used a central scheme for the shear wave, and it led to the transition in hypersonic flow over a ramp and other cases. I asked the simple question, "Why wouldn't it work for gas-gas and gas-liquid cases? There are researchers who are using fully central schemes, like KEEP, for gas-liquid flows (without shocks).". This code and the paper arXiv:2604.20036 are the outcome of it.
+I wanted to make sure that the idea of using a central scheme works for the shear wave even for gas-liquid cases. In Hoffmann et al. (JCP 2024), we have used a central scheme for the shear wave, and it led to the transition in hypersonic flow over a ramp and other cases. I asked the simple question, "Why wouldn't it work for gas-gas and gas-liquid cases? There are researchers who are using fully central schemes, like KEEP, for gas-liquid flows (without shocks).". This code and the paper arXiv:2604.20036 (https://doi.org/10.1016/j.jcp.2026.115314) are the outcome of it. 
 
 Second code: Sainath_M10.py is a shock interaction with a droplet at Mach 10. It works again. However, it only uses THINC and lacks a central scheme for shear. The problem lies in the wake. There are other code snippets in the first code. If you’ve come this far, I assume you’re clever enough to figure out how to incorporate  other version of THINC (commented out). The MP5 scheme is also included and can add WENO. There are plenty of choices available.
 
@@ -71,7 +73,7 @@ You can plot the npz file. Also check this, https://github.com/aschamarthi/WA-CR
 
 ## Lastly
 
-Thanks to Prof. Steven H. Frankel, Natan Hoffmann, and Sean Bokor with whom I have worked over the years. I am grateful to Natan Hoffmann and Sean Bokor for their patience and substantial implementation efforts during the development and testing of all the reconstruction algorithms presented and published over the years. I understand that this process may, at times, have been frustrating (It doesn't make sense to rewrite the code a million times; changing from primitive to conservative, so many algorithms, etc). Sure did predict transition to turbulence and worked for reacting flows, but it’s been arduous for everyone involved. 
+Thanks to Prof. Steven H. Frankel, Natan Hoffmann, and Sean Bokor with whom I have worked over the years. I am grateful to Natan Hoffmann and Sean Bokor for their patience and their efforts during the development and testing of all the reconstruction algorithms presented and published (or not) over the years. I understand that this process may, at times, have been frustrating (It doesn't make sense to rewrite the code a million times; changing from primitive to conservative, so many algorithms, etc). Sure did predict transition to turbulence and worked for reacting flows, but it’s been arduous for everyone involved. 
 
 I wish I understood why there was a difference between primitive and conservative variable results in 2018 itself. Everyone is doing it can be an excuse. Sometimes, that’s the way cookie crumble. That’s all there is to it. https://arxiv.org/pdf/2106.01738 --- is the work that started it all.
 
@@ -91,8 +93,8 @@ Few more figures......
 2. Hoffmann, Chamarthi, Frankel — *Centralized gradient-based reconstruction for wall modeled large eddy simulations of hypersonic boundary layer transition*, **J. Comput. Phys.** (2024)
 3. Chamarthi — *Wave-appropriate multidimensional upwinding approach for compressible multiphase flows*, **J. Comput. Phys.** 538, 114157 (2025)
 4. Chamarthi — *Physics appropriate interface capturing reconstruction approach for viscous compressible multicomponent flows*, **Comput. Fluids** 303, 106858 (2025)
-5. Chamarthi — *Wave-appropriate reconstruction of compressible flows: physics-constrained acoustic dissipation and rank-1 entropy wave correction*, preprint (2026), arXiv:2604.02757
-6. Chamarthi - *Wave-Appropriate Reconstruction of Compressible Multiphase and Multicomponent Flows: Fully Conservative and Semi-Conservative Eigenstructures*,  preprint (2026),  arXiv:2604.20036
+5. Chamarthi — *Wave-appropriate reconstruction of compressible flows: physics-constrained acoustic dissipation and rank-1 entropy wave correction*, **J. Comput. Phys.**, 2026.
+6. Chamarthi - *Wave-Appropriate Reconstruction of Compressible Multiphase and Multicomponent Flows: Fully Conservative and Semi-Conservative Eigenstructures*,  **J. Comput. Phys.**, 2026.
 
 ## Author
 
